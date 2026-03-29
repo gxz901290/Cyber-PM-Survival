@@ -23,7 +23,11 @@ export const translations = {
     // Lark Popup
     larkAlert: "Holo-Lark Alert",
     larkMsg: "\"PM! The production environment is down! Reply immediately!\"",
+    larkMsg1: "CS Group: Production bug affecting users, @you and boss",
+    larkMsg2: "RD Blame: Requirements unclear, can't do it",
+    larkMsg3: "Ops Push: New feature must launch next week",
     acknowledge: "Acknowledge",
+    stabilityPenalty: "Stability",
 
     // AB Test
     abTitle: "A/B Test Results",
@@ -67,8 +71,11 @@ export const translations = {
     p3Title: "Scope Grabbing",
     p3Desc: "Consume Logic & Comm to expand your territory and increase Cronyism.",
     p3Report: "Report Upwards (-10 Logic, -10 Comm)",
-    p3Skip: "Give up scope and lie low (Skip)",
-    p3ChatTitle: "Holo-Lark: All-Hands Crisis",
+    p3GiveUp: "Give up scope and lie low (Skip)",
+    p3Lark: "Holo-Lark: All-Hands Crisis",
+    p3Chat101: "CS Group: Production bug affecting users, @you and boss",
+    p3Chat102: "RD Blame: Requirements unclear, can't do it",
+    p3Chat103: "Ops Push: New feature must launch next week",
     p3C1Msg: "QA: The new feature broke the payment gateway. Who tested this?",
     p3C1O1: "Blame RD: 'They didn't follow the PRD.'",
     p3C1O2: "Take blame: 'My bad, I missed the edge case.'",
@@ -159,7 +166,11 @@ export const translations = {
     // Lark Popup
     larkAlert: "全息Lark警报",
     larkMsg: "“PM！线上环境挂了！立刻回复！”",
+    larkMsg1: "客服拉群：线上Bug影响用户，@你和老板",
+    larkMsg2: "RD甩锅：需求没说清楚，做不了",
+    larkMsg3: "运营催更：下周要上线新功能",
     acknowledge: "收到并处理",
+    stabilityPenalty: "精神值",
 
     // AB Test
     abTitle: "A/B 实验结果",
@@ -203,8 +214,11 @@ export const translations = {
     p3Title: "抢Scope策略",
     p3Desc: "消耗逻辑与沟通来扩张你的业务地盘，并增加嫡系值。",
     p3Report: "向上汇报 (-10 逻辑, -10 沟通)",
-    p3Skip: "放弃Scope，低调做人 (跳过)",
-    p3ChatTitle: "全息Lark：全员危机群",
+    p3GiveUp: "放弃Scope，低调做人 (跳过)",
+    p3Lark: "全息Lark：全员危机群",
+    p3Chat101: "客服拉群：线上Bug影响用户，@你和老板",
+    p3Chat102: "RD甩锅：需求没说清楚，做不了",
+    p3Chat103: "运营催更：下周要上线新功能",
     p3C1Msg: "QA：新功能把支付网关搞挂了。谁测的？",
     p3C1O1: "甩锅研发：“他们没按PRD开发。”",
     p3C1O2: "主动背锅：“我的错，漏了边缘场景。”",

@@ -83,6 +83,15 @@ export const Phase4Promotion: React.FC<Phase4Props> = ({ state, updateState, onC
     return () => clearInterval(interval);
   }, [stage, t]);
 
+  useEffect(() => {
+    if (patience <= 0 && stage !== 'INTRO' && stage !== 'DEFENSE') {
+      // If patience runs out during PPT or Soul Question, it's a fail
+      playError();
+      updateState({ phase: 'ENDING', ending: 'A' });
+      onComplete();
+    }
+  }, [patience, stage, updateState, onComplete, playError]);
+
   const handleTimeout = () => {
     playError();
     triggerGlitch();
@@ -232,10 +241,13 @@ export const Phase4Promotion: React.FC<Phase4Props> = ({ state, updateState, onC
       playSuccess();
       // Determine ending
       let ending: 'A' | 'B' | 'C' | 'D' = 'A';
-      let finalLevel = state.level;
-      if (state.attributes.sanity <= 0) ending = 'D';
-      else if (state.attributes.cronyism >= 80) { ending = 'B'; finalLevel = 'P7'; }
-      else if (state.attributes.logic >= 80 && state.attributes.communication >= 80 && state.attributes.owner >= 80) { ending = 'C'; finalLevel = 'P7'; }
+      let finalLevel = 'P7';
+      if (state.attributes.sanity <= 0) {
+        ending = 'D';
+        finalLevel = state.level;
+      }
+      else if (state.attributes.cronyism >= 80) ending = 'B';
+      else if (state.attributes.logic >= 80 && state.attributes.communication >= 80 && state.attributes.owner >= 80) ending = 'C';
       else ending = 'A';
 
       updateState({ phase: 'ENDING', ending, level: finalLevel });

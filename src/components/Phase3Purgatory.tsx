@@ -20,19 +20,27 @@ export const Phase3Purgatory: React.FC<Phase3Props> = ({ state, updateState, onC
 
   const CHAT_SCENARIOS = [
     {
-      msg: t('p3Chat1'),
+      msg: t('p3Chat101'),
       options: [
-        { text: t('p3Chat1O1'), sanity: -5, cronyism: -10, owner: -10 },
-        { text: t('p3Chat1O2'), sanity: -15, cronyism: 10, owner: 20 },
-        { text: t('p3Chat1O3'), sanity: -5, cronyism: 5, owner: 5 }
+        { text: t('p3C1O1'), sanity: -5, cronyism: -10, owner: -10 },
+        { text: t('p3C1O2'), sanity: -15, cronyism: 10, owner: 20 },
+        { text: t('p3C1O3'), sanity: -5, cronyism: 5, owner: 5 }
       ]
     },
     {
-      msg: t('p3Chat2'),
+      msg: t('p3Chat102'),
       options: [
-        { text: t('p3Chat2O1'), sanity: -5, cronyism: -10, owner: -5 },
-        { text: t('p3Chat2O2'), sanity: -20, cronyism: 15, owner: 15 },
-        { text: t('p3Chat2O3'), sanity: -5, cronyism: 0, owner: 0 }
+        { text: t('p3C1O1'), sanity: -5, cronyism: -10, owner: -10 },
+        { text: t('p3C1O2'), sanity: -15, cronyism: 10, owner: 20 },
+        { text: t('p3C1O3'), sanity: -5, cronyism: 5, owner: 5 }
+      ]
+    },
+    {
+      msg: t('p3Chat103'),
+      options: [
+        { text: t('p3C1O1'), sanity: -5, cronyism: -10, owner: -10 },
+        { text: t('p3C1O2'), sanity: -15, cronyism: 10, owner: 20 },
+        { text: t('p3C1O3'), sanity: -5, cronyism: 5, owner: 5 }
       ]
     }
   ];

@@ -127,12 +127,7 @@ export default function App() {
 
   return (
     <>
-      <div className="fixed inset-0 z-[100] bg-[#1A1A2E] flex flex-col items-center justify-center text-center p-6 portrait:flex landscape:hidden md:hidden">
-        <h2 className="text-[#E94560] font-bold text-2xl mb-4 neon-text-pink uppercase">{t('systemError')}</h2>
-        <p className="text-gray-300 font-mono">{t('rotateDevice')}</p>
-        <div className="mt-8 w-16 h-16 border-4 border-[#00E5FF] rounded-full border-t-transparent animate-spin" />
-      </div>
-      <div className="w-screen h-screen bg-[#1A1A2E] text-white overflow-hidden relative crt hidden landscape:block md:block">
+      <div className="w-screen h-screen bg-[#1A1A2E] text-white overflow-hidden relative crt">
         <MatrixRain />
       
       {state.phase !== 'MENU' && state.phase !== 'ENDING' && (
