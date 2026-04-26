@@ -1,0 +1,106 @@
+@import "tailwindcss";
+
+@theme {
+  --color-cyber-bg: #1A1A2E;
+  --color-cyber-panel: #16213E;
+  --color-cyber-pink: #E94560;
+  --color-cyber-blue: #00E5FF;
+  --color-cyber-purple: #B900FF;
+  --color-cyber-gold: #FFD700;
+  --color-cyber-green: #39FF14;
+  --color-cyber-red: #FF003C;
+  --font-cyber: 'Orbitron', 'JetBrains Mono', monospace;
+}
+
+body {
+  background-color: var(--color-cyber-bg);
+  color: #fff;
+  font-family: var(--font-cyber);
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+/* Neon Text Glow */
+.neon-text-blue {
+  text-shadow: 0 0 5px var(--color-cyber-blue), 0 0 10px var(--color-cyber-blue);
+}
+.neon-text-pink {
+  text-shadow: 0 0 5px var(--color-cyber-pink), 0 0 10px var(--color-cyber-pink);
+}
+.neon-text-gold {
+  text-shadow: 0 0 5px var(--color-cyber-gold), 0 0 10px var(--color-cyber-gold);
+}
+.neon-text-red {
+  text-shadow: 0 0 5px var(--color-cyber-red), 0 0 10px var(--color-cyber-red);
+}
+
+/* Neon Box Glow */
+.neon-box-blue {
+  box-shadow: 0 0 10px var(--color-cyber-blue), inset 0 0 10px var(--color-cyber-blue);
+  border: 1px solid var(--color-cyber-blue);
+}
+.neon-box-pink {
+  box-shadow: 0 0 10px var(--color-cyber-pink), inset 0 0 10px var(--color-cyber-pink);
+  border: 1px solid var(--color-cyber-pink);
+}
+
+/* Glitch Effect */
+@keyframes glitch {
+  0% { transform: translate(0) }
+  20% { transform: translate(-2px, 2px) }
+  40% { transform: translate(-2px, -2px) }
+  60% { transform: translate(2px, 2px) }
+  80% { transform: translate(2px, -2px) }
+  100% { transform: translate(0) }
+}
+.glitch-hover:hover {
+  animation: glitch 0.2s linear infinite;
+}
+
+/* Smooth Value Transition */
+.value-transition {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Matrix Rain Background */
+.matrix-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: -1;
+  opacity: 0.15;
+  background-image: repeating-linear-gradient(0deg, transparent, transparent 2px, var(--color-cyber-green) 2px, var(--color-cyber-green) 4px);
+  background-size: 100% 4px;
+  animation: scanline 10s linear infinite;
+}
+
+@keyframes scanline {
+  0% { background-position: 0 0; }
+  100% { background-position: 0 1000px; }
+}
+
+/* Glassmorphism */
+.cyber-glass {
+  background: rgba(22, 33, 62, 0.7);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* CRT Scanline overlay */
+.crt::before {
+  content: " ";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%), linear-gradient(90deg, rgba(255, 0, 0, 0.06), rgba(0, 255, 0, 0.02), rgba(0, 0, 255, 0.06));
+  z-index: 2;
+  background-size: 100% 2px, 3px 100%;
+  pointer-events: none;
+}
